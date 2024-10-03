@@ -5,7 +5,6 @@ import reactEslint from 'eslint-plugin-react';
 import prettierEslint from 'eslint-plugin-prettier/recommended';
 
 const config = [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
     settings: {
       react: {
