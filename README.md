@@ -10,7 +10,7 @@ It will detect existance of `react` to enable React & frontend rules.
 ## Installation
 
 ```bash
-yarn install eslint-config-tyler
+yarn add --dev eslint-config-tyler
 ```
 
 ## Usage
