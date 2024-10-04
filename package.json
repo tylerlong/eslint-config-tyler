@@ -1,7 +1,11 @@
 {
   "name": "eslint-config-tyler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
+  "files": [
+    "*.mjs",
+    "*.mts"
+  ],
   "scripts": {
     "compile": "tsc --target ESNext --moduleResolution NodeNext --module NodeNext eslint.config.mts prettier.config.mts",
     "lint": "sort-package-json && eslint . --fix",
