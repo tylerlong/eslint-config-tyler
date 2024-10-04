@@ -1,4 +1,6 @@
-const config = {
+import { Config } from 'prettier';
+
+const config: Config = {
   singleQuote: true,
 };
 
