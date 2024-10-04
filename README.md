@@ -2,8 +2,10 @@
 
 Tyler's ESLint (& Prettier) configuration.
 
-It's opinionated. It works out of the box. 
+It's opinionated. It works out of the box.
 
+It supports both Node.js projects and React frontend projects.
+It will detect existance of `react` to enable React & frontend rules.
 
 ## Installation
 
