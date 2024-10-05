@@ -6,6 +6,9 @@ import { Linter } from 'eslint';
 
 const config: Linter.Config[] = [
   {
+    ignores: [],
+  },
+  {
     languageOptions: { globals: globals.node },
   },
   jsEslint.configs.recommended,
@@ -17,8 +20,8 @@ try {
   await import('react');
   const reactEslint = await import('eslint-plugin-react');
   config.push(reactEslint.default.configs.flat.recommended as Linter.Config);
-  config[0].languageOptions!.globals = globals.browser;
-  config[0].settings = { react: { version: 'detect' } };
+  config[1].languageOptions!.globals = globals.browser;
+  config[1].settings = { react: { version: 'detect' } };
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
 } catch (e) {
   // ignore
