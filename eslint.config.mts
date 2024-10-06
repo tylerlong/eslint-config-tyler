@@ -6,10 +6,12 @@ import { Linter } from 'eslint';
 
 const config: Linter.Config[] = [
   {
+    // must be the only key here, ref: https://eslint.org/docs/latest/use/configure/ignore
     ignores: [],
   },
   {
     languageOptions: { globals: globals.node },
+    rules: { eqeqeq: ['error', 'always'] },
   },
   jsEslint.configs.recommended,
   ...(tsEslint.configs.recommended as Linter.Config[]),

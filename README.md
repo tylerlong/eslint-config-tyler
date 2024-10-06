@@ -32,6 +32,7 @@ export default config;
 ```
 
 Run:
+
 ```bash
 yarn eslint . --fix
 ```
@@ -41,13 +42,12 @@ yarn eslint . --fix
 If you need to change some configuration:
 
 ```js
-import config from "eslint-config-tyler/prettier.config.mjs";
+import config from 'eslint-config-tyler/prettier.config.mjs';
 
 config.singleQuote = false;
 
 export default config;
 ```
-
 
 ## Ignore
 
@@ -62,11 +62,20 @@ export default config;
 ```
 
 Please note that you should NOT add any other keys to `config[0]`, because according to ESLint's documentation:
+
 > if an ignores key is used without any other keys in the configuration object, then the patterns act as global ignores.
-Ref: https://eslint.org/docs/latest/use/configure/ignore
+> Ref: https://eslint.org/docs/latest/use/configure/ignore
 
 ### Prettier
 
 You need to create a `.prettierignore` file.
 
 It cannot be configured in `prettier.config.mjs` file, unfortunately.
+
+## Config rules:
+
+```js
+config[1].rules[ruleName] = 'off' | 'warn' | 'error';
+```
+
+We should not change `config[0]` since it is for ignore only.
