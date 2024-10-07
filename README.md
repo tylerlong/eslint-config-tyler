@@ -79,3 +79,13 @@ config[1].rules[ruleName] = 'off' | 'warn' | 'error';
 ```
 
 We should not change `config[0]` since it is for ignore only.
+
+## Format on Save with VS Code
+
+```json
+"editor.defaultFormatter": "esbenp.prettier-vscode",
+"editor.formatOnSave": true,
+"editor.codeActionsOnSave": {
+  "source.fixAll.eslint": "explicit"
+},
+```
