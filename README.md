@@ -89,3 +89,8 @@ We should not change `config[0]` since it is for ignore only.
   "source.fixAll.eslint": "explicit"
 },
 ```
+
+## Todo
+
+- Create a new ESLint rule, order imports, external first, local after. Blank line between external and local.
+  - This rule must come with auto fix feature.
