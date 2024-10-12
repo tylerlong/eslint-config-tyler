@@ -1,8 +1,8 @@
-import globals from 'globals';
 import jsEslint from '@eslint/js';
-import tsEslint from 'typescript-eslint';
-import prettierEslint from 'eslint-plugin-prettier/recommended';
 import { Linter } from 'eslint';
+import prettierEslint from 'eslint-plugin-prettier/recommended';
+import globals from 'globals';
+import tsEslint from 'typescript-eslint';
 
 const config: Linter.Config[] = [
   {
