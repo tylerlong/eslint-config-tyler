@@ -2,7 +2,8 @@ import { Config } from 'prettier';
 
 const config: Config = {
   singleQuote: true,
-  plugins: ['@trivago/prettier-plugin-sort-imports'],
+  plugins: ['@ianvs/prettier-plugin-sort-imports'],
+  importOrder: ['<BUILTIN_MODULES>', '', '<THIRD_PARTY_MODULES>', '', '^[.]'],
 };
 
 export default config;
