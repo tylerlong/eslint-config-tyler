@@ -92,5 +92,5 @@ We should not change `config[0]` since it is for ignore only.
 
 ## Todo
 
-- Create a new ESLint rule, order imports, external first, local after. Blank line between external and local.
-  - This rule must come with auto fix feature.
+- ESLint rule to add blank lines to class definition.
+  - Like blank lines between member functions, blank lines between member properties and constructor.
