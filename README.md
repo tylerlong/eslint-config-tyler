@@ -99,3 +99,5 @@ We should not change `config[0]` since it is for ignore only.
 
 To make `eslint-plugin-react-hooks` work, your react component shouldn't be wrapped.
 For example: `const App = auto(() => '')` doesn't work because it is wrapped by `auto`.
+related: https://github.com/jsx-eslint/eslint-plugin-react/issues/3848
+It works if I write it like this: `const App = auto(function App() { return ''; })`.

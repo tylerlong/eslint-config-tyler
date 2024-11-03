@@ -26,6 +26,12 @@ const config: Linter.Config[] = [
         { blankLine: 'always', prev: '*', next: 'function' },
         { blankLine: 'always', prev: '*', next: 'class' },
       ],
+      '@stylistic/lines-between-class-members': [
+        'error',
+        {
+          enforce: [{ blankLine: 'always', prev: '*', next: 'method' }],
+        },
+      ],
     },
   },
 ];
