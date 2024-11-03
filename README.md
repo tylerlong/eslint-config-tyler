@@ -94,4 +94,3 @@ We should not change `config[0]` since it is for ignore only.
 
 - ESLint rule to add blank lines to class definition.
   - Like blank lines between member functions, blank lines between member properties and constructor.
-- eslint-plugin-react-hooks works in this project, but doesn't work in external projects
