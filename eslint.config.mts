@@ -23,15 +23,13 @@ try {
   const reactEslint = await import('eslint-plugin-react');
   config.push(reactEslint.default.configs.flat?.recommended as Linter.Config);
 
-  // todo: in the future, eslint-plugin-react-hooks may support flat config
+  // todo: in the future, eslint-plugin-react-hooks may support flat config out-of-box
   const reactHooksEslint = await import('eslint-plugin-react-hooks');
   config.push({
     plugins: {
-      'react-hooks': reactHooksEslint,
+      'react-hooks': reactHooksEslint.default,
     },
-    rules: {
-      ...reactHooksEslint.configs.recommended.rules,
-    },
+    rules: reactHooksEslint.default.configs.recommended.rules,
   });
 
   config[1].languageOptions!.globals = globals.browser;

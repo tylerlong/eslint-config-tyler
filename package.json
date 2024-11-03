@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tyler",
-  "version": "0.1.9",
+  "version": "0.1.15",
   "license": "MIT",
   "files": [
     "*.mjs",
