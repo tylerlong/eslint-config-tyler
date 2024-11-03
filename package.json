@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tyler",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "license": "MIT",
   "files": [
     "*.mjs",
@@ -19,6 +19,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
     "globals": "^15.11.0",
     "prettier": "^3.3.3",
     "typescript-eslint": "^8.12.2"

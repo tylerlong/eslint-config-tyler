@@ -21,11 +21,22 @@ const config: Linter.Config[] = [
 try {
   await import('react');
   const reactEslint = await import('eslint-plugin-react');
-  config.push(reactEslint.default.configs.flat.recommended as Linter.Config);
+  config.push(reactEslint.default.configs.flat?.recommended as Linter.Config);
+
+  // todo: in the future, eslint-plugin-react-hooks may support flat config
+  const reactHooksEslint = await import('eslint-plugin-react-hooks');
+  config.push({
+    plugins: {
+      'react-hooks': reactHooksEslint,
+    },
+    rules: {
+      ...reactHooksEslint.configs.recommended.rules,
+    },
+  });
+
   config[1].languageOptions!.globals = globals.browser;
   config[1].settings = { react: { version: 'detect' } };
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-} catch (e) {
+} catch {
   // ignore
 }
 
