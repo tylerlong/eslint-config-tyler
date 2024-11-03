@@ -1,5 +1,6 @@
 import jsEslint from '@eslint/js';
-import { Linter } from 'eslint';
+import stylisticEslint from '@stylistic/eslint-plugin';
+import { ESLint, Linter } from 'eslint';
 import prettierEslint from 'eslint-plugin-prettier/recommended';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
@@ -15,6 +16,18 @@ const config: Linter.Config[] = [
   },
   jsEslint.configs.recommended,
   ...(tsEslint.configs.recommended as Linter.Config[]),
+  {
+    plugins: {
+      '@stylistic': stylisticEslint as ESLint.Plugin,
+    },
+    rules: {
+      '@stylistic/padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: '*', next: 'function' },
+        { blankLine: 'always', prev: '*', next: 'class' },
+      ],
+    },
+  },
 ];
 
 // only if react is installed
