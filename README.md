@@ -96,3 +96,8 @@ To make `eslint-plugin-react-hooks` work, your react component shouldn't be wrap
 For example: `const App = auto(() => '')` doesn't work because it is wrapped by `auto`.
 related: https://github.com/jsx-eslint/eslint-plugin-react/issues/3848
 It works if I write it like this: `const App = auto(function App() { return ''; })`.
+
+## Todo
+
+- do no allow blank lines between public class members?
+- do not allow blanks lines unless next is a function or class or comment line?
