@@ -101,3 +101,4 @@ It works if I write it like this: `const App = auto(function App() { return ''; 
 
 - do no allow blank lines between public class members?
 - do not allow blanks lines unless next is a function or class or comment line?
+- it is broken due to: https://github.com/typescript-eslint/typescript-eslint/issues/10338
